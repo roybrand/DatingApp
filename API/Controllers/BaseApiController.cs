@@ -8,7 +8,7 @@ namespace API.Controllers
     [ApiController]
     public abstract  class BaseApiController : ControllerBase
     {
-        protected readonly DataContext _context;
+        protected readonly DataContext _context;        
 
         protected BaseApiController(DataContext context)
         {
