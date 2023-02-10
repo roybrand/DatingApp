@@ -8,14 +8,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class UsersController : ControllerBase
-    {
-        private readonly DataContext _context;
-        public UsersController(DataContext context)
+    
+    public class UsersController : BaseApiController
+    { 
+        public UsersController(DataContext context) : base(context)
         {
-            _context = context;
         }
 
         [HttpGet]
